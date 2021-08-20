@@ -21,7 +21,7 @@ useEffect(function(){
     },[]);
    
     if(product ===null){
-        return <h1>상품 정보를 받고 있습니다...</h1>
+        return <h1>Loading...</h1>
     }
     return (
         <div>

@@ -30,7 +30,7 @@ function MainPage() {
         <div id="banner">
           <img src="images/banners/banner1.png" />
         </div>
-        <h1 id="product-headline">판매되는 상품들</h1>
+        <h1 id="product-headline">Products</h1>
         <div id="product-list">
 
           {

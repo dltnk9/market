@@ -43,7 +43,7 @@ function UploadPage(){
 
 return <div id="upload-container">
     <Form name ="상품 업로드" onFinish={onSubmit}>
-<Form.Item name="upload" label={<div className="upload-label">상품 사진</div>}>
+<Form.Item name="upload" label={<div className="upload-label">Image</div>}>
 
 < Upload name="image" action={`${API_URL}/image`}
 list Type="picture" showUploadList={false}
@@ -52,7 +52,7 @@ onChange={onChangeImage}>
     {
         imageUrl ? <img id="upload-img" src={`${API_URL}/${imageUrl}`}/> : <div id="upload-img-placeholder">
         <img src="/images/icons/camera.png" />
-        <span>이미지를 업로드해주세요</span>
+        <span>Please Upload product image</span>
 
     </div>
     }
@@ -62,22 +62,22 @@ onChange={onChangeImage}>
     </Form.Item>
     <Divider />
     <Form.Item
-    label={<div className="upload-label" >판매자 명</div>}
-    name="seller" rules={[{required: true, message: '판매자 이름을 입력해주세요'}]}
+    label={<div className="upload-label" >Seller</div>}
+    name="seller" rules={[{required: true, message: 'type the name of the seller'}]}
     
     >
-        <Input className="upload-name" size="large" placeholder="이름을 입력해주세요." />
+        <Input className="upload-name" size="large" placeholder="type the name of the seller." />
     </Form.Item>
     <Divider/>
     <Form.Item name="name"
-    label={<div className="upload-label">상품 이름</div>}
-    rules={[{required: true, message: '상품 이름을 입력해주세요.'}]}>
-<Input className="upload-name" size="large" placeholder="상품 이름을 입력해주세요."></Input>
+    label={<div className="upload-label">P.Name</div>}
+    rules={[{required: true, message: 'type the name of the product.'}]}>
+<Input className="upload-name" size="large" placeholder="type the name of the product."></Input>
     </Form.Item>
 
 <Divider/>
-<Form.Item name="price" label={<div className="upload-label">상품 가격</div>}
-rules={[{required: true, message: '상품 가격을 입력해주세요.'}]}
+<Form.Item name="price" label={<div className="upload-label">Price</div>}
+rules={[{required: true, message: 'price required.'}]}
 >
     <InputNumber 
     defaultValue={0}
@@ -85,8 +85,8 @@ rules={[{required: true, message: '상품 가격을 입력해주세요.'}]}
 </Form.Item>
 <Divider/>
 <Form.Item name="description"
-label={<div className="upload-label">상품 소개</div>}
-rules={[{required: true, message: "상품 소개를 입력해주세요."}]}
+label={<div className="upload-label">Description</div>}
+rules={[{required: true, message: "type the description."}]}
 >
     
     <Input.TextArea size="large" id= "product-description" showCount maxLength={300} placeholder="상품 소개를 적어주세요."></Input.TextArea>
